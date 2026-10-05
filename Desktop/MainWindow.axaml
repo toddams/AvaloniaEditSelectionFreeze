@@ -1,0 +1,18 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ae="https://github.com/avaloniaui/avaloniaedit"
+        x:Class="AvaloniaEditSelectionFreeze.MainWindow"
+        Title="AvaloniaEdit selection freeze repro"
+        Width="800" Height="500">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Margin="12" Spacing="8">
+            <TextBlock TextWrapping="Wrap"
+                       Text="Press the left mouse button on a line, keep holding it, and drag the pointer below the bottom edge of the editor. When the selection reaches the last line, the window stops responding." />
+            <StackPanel Orientation="Horizontal" Spacing="16">
+                <CheckBox x:Name="AllowScrollBelowDocument" Content="Options.AllowScrollBelowDocument" />
+                <CheckBox x:Name="TextMateInstalled" Content="TextMate installed" />
+            </StackPanel>
+        </StackPanel>
+        <ae:TextEditor x:Name="Editor" FontFamily="Consolas, Menlo, monospace" ShowLineNumbers="True" />
+    </DockPanel>
+</Window>
